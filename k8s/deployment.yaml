@@ -22,9 +22,10 @@ spec:
     spec:
       containers:
         - name: skynet-docs
-          image: httpd:alpine
+          image: busybox:latest
+          command: ["httpd", "-f", "-v", "-p", "8080"]
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               name: http
           resources:
             requests:
