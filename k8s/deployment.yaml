@@ -22,9 +22,9 @@ spec:
     spec:
       containers:
         - name: skynet-docs
-          image: ghcr.io/cyberdine-skynet/skynet-docs:latest
+          image: nginx:alpine
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               name: http
           resources:
             requests:
@@ -46,8 +46,7 @@ spec:
             initialDelaySeconds: 5
             periodSeconds: 10
           securityContext:
-            runAsNonRoot: true
-            runAsUser: 101 # nginx user
+            runAsNonRoot: false
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: true
             capabilities:
