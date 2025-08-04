@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: skynet-docs
+  labels:
+    name: skynet-docs
+    app.kubernetes.io/name: skynet-docs
+    app.kubernetes.io/part-of: skynet-platform
