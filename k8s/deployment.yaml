@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: skynet-docs
-          image: nginx:alpine
+          image: httpd:alpine
           ports:
             - containerPort: 80
               name: http
